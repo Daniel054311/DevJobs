@@ -14,13 +14,12 @@ import { ThemeService } from '../../../theme.service';
 })
 export class JobsComponent implements OnInit {
   jobs: Job[] = [];
-  storedTheme: string | null;
 
   constructor(
     private jobsService: JobsService,
     private themeService: ThemeService
   ) {
-    this.storedTheme = this.themeService.getCurrentTheme();
+
   }
 
   ngOnInit(): void {
@@ -34,8 +33,8 @@ export class JobsComponent implements OnInit {
     });
   }
 
-  setTheme() {
-    this.themeService.toggleTheme();
-    this.storedTheme = this.themeService.getCurrentTheme();
+  get isDarkMode(): boolean {
+    return this.themeService.getCurrentTheme();
   }
+  
 }

@@ -1,5 +1,5 @@
-<main ngClass="{{storedTheme}}">
-<app-header></app-header>
+<main [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }">
+  <app-header (darkModeChange)="onDarkModeChange($event)"></app-header>
 <router-outlet></router-outlet>
 </main>
 

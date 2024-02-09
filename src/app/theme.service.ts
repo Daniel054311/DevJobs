@@ -4,17 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeService {
-  private readonly themeKey = 'themeColor';
+  private isDarkMode: boolean = false;
 
   constructor() { }
 
-  getCurrentTheme(): string | null {
-    return localStorage.getItem(this.themeKey);
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    // You can also save the theme preference in local storage if needed
   }
 
-  toggleTheme(): void {
-    const currentTheme = this.getCurrentTheme();
-    const newTheme = currentTheme === 'themeLight' ? 'themeDark' : 'themeLight';
-    localStorage.setItem(this.themeKey, newTheme);
+  getCurrentTheme(): boolean {
+    return this.isDarkMode;
   }
 }

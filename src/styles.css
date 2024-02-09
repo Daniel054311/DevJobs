@@ -8,12 +8,16 @@
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
 }
+body{
+  background-color: #f3f5f8;
+}
 
-.themeDark{
+.darkMode{
   background-color: #222;
   color: #fff;
 }
-.themeLight{
-  background-color: #fff;
-  color: #222;
+
+button{
+  border: none;
+
 }

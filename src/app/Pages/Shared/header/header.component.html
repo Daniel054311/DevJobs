@@ -1,12 +1,16 @@
-
-  <header class="headerContainer">
+<section>
+  <header class="headerContainer" [ngClass]="{ 'darkMode': isDarkMode }">
 <div class="title">devjobs</div>
 
 <div class="togglle">
+  <img src="../../../../assets/desktop/icon-sun.svg" alt="">
   <label class="switch">
-    <input type="checkbox" checked>
+    <input type="checkbox" (change)="toggleDarkMode()" [checked]="isDarkMode">
     <span class="slider round"></span>
   </label>
-
+  <img src="../../../../assets/desktop/icon-moon.svg" alt="">
 </div>
   </header>
+
+<app-navbar></app-navbar>
+</section>
