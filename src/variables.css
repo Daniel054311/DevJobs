@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #F2F2F2;
+  --secondary-color: #121720;
+  --text-color: #6E8098;
+  --background-color: #ffffff;
+  --job-title-color: #19202D;
+  --job-title-color-darkMode: #19202D;
+  --location-color: #5964e0;
+  --button-color:#5964E0;
+  --dark-background-color:#19202D;
+  --white-color:#ffffff;
+  --border-color:#E7E8E9;
+  --black-color:#19202D;
+}
+
+button{
+  border: none;
+}
+
+

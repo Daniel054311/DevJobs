@@ -1,0 +1,17 @@
+<section>
+  <div class="parentContainer" >
+    @for (job of jobs; track job) {
+      <div class="cardContainer"   [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }">
+       <div  class="image" [style.background-color]="job.logoBackground" ><img  [src]="job.logo" alt=""  /></div>
+        <div class="jobContainer">
+          <div class="job">
+       <div class="jobPostedDate"><p>{{job.postedAt}}</p><p>.</p> <p>{{job.contract}}</p></div>
+        <h1 class="jobPosition"> {{ job.position }}</h1>
+        <p>{{job.company}}</p>
+      </div >
+      <p class="jobLocation">{{job.location}}</p>
+      </div>
+    </div>
+      }
+  </div>
+</section>

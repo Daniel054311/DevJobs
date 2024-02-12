@@ -1,13 +1,16 @@
 /* Styles for the navigation container */
-.navContainer {
+.parentContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: var( --background-color);
   height: 10vh;
   padding: 0 2%;
-  margin: -20px 10%;
+  margin: -2.5% 10%;
   border-radius: 5px;
+}
+.darkMode{
+background-color: var(--dark-background-color);
 }
 
 /* Styles for navigation items */
@@ -20,7 +23,25 @@
   padding: 0 2%;
 
 }
+.filterIconsWrapper{
+  display: none;
+}
 
+ .icons{
+  display: none;
+}
+.checkboxContainer  {
+  border-left: 2px solid var(--border-color);
+  height: 100%;
+}
+.location {
+  border-left: 2px solid var(--border-color);
+  height: 100%;
+}
+.navItems .darkMode{
+  background-color: var(--dark-background-color);
+  color: var(--white);
+}
 .navItems p{
   font-weight: bold;
   color: #19202D;
@@ -34,11 +55,9 @@ input[type="text"] {
 
 
 /* styles for the icons */
-.icon{
-  color: #5964E0;
-}
+
 button{
-  background-color: #fff;
+  background-color: transparent;
 }
 .search{
   padding: 10px 20px;
@@ -50,18 +69,6 @@ button{
   cursor: pointer;
 }
 
-.filterIcon{
-display: none;
-}
-
-.checkboxContainer{
-  border-left: 1px solid #f3f5f8;
-  height: 100%;
-}
-.location{
-  border-left: 2px solid #f3f5f8;
-  height: 100%;
-}
 /* Styles for checkbox item */
 .checkboxItem {
   display: flex;
@@ -131,34 +138,48 @@ display: none;
 }
 
 @media  screen and (max-width: 900px){
-  .navContainer{
-justify-content: center;
+  .parentContainer{
+    justify-content: space-between;
 align-items: center;
   }
 
+  .navItems:nth-child(1),
   .navItems:nth-child(2),
   .navItems:nth-child(3) {
     display: none;
   }
+.darkMode .filterIcon img{
+  filter: brightness(0) invert(1);
+}
 
-  .navContainer .filterItems{
+ .filterItems{
     display: flex;
-    flex-direction: row-reverse;
+   justify-content: space-between;
+   gap: 5%;
+  border: 2px solid red;
   }
-  .filterIcon{
-    display: block;
-    color: #6E8098;
-    }
+  .filterIconsWrapper{
+  display: block;
+  }
+    .icons{
+   display: block;
+   display: flex;
+   gap: 20px;
+  }
+
+
 
   .searchIcon{
     border-radius: 5px;
-    padding: 7px;
-    background-color: #5964E0;
-    text-align: center;
+    padding: 10px;
+    background-color: var(--button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .searchIcon img {
     filter: brightness(0) invert(1);
-    width: 12px;
+    width: 20px;
   }
 
 

@@ -1,40 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from '../../Shared/navbar/navbar.component';
+import { NavbarComponent } from '../../Shared/filter/navbar.component';
 import { JobsService } from '../../../jobs.service';
 import { Job } from '../../../job';
 import { NgClass } from '@angular/common';
 import { ThemeService } from '../../../theme.service';
+import { CardComponent } from '../../Shared/card/card.component';
 
 @Component({
   selector: 'app-jobs',
   standalone: true,
-  imports: [NavbarComponent,NgClass],
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.css',
+  imports: [NavbarComponent, NgClass, CardComponent],
 })
 export class JobsComponent implements OnInit {
-  jobs: Job[] = [];
+  constructor() {}
 
-  constructor(
-    private jobsService: JobsService,
-    private themeService: ThemeService
-  ) {
-
-  }
-
-  ngOnInit(): void {
-    this.loadJobs();
-  }
-
-  loadJobs() {
-    this.jobsService.getAllJobs().subscribe((jobs) => {
-      this.jobs = jobs;
-      console.log(jobs);
-    });
-  }
-
-  get isDarkMode(): boolean {
-    return this.themeService.getCurrentTheme();
-  }
-  
+  ngOnInit(): void {}
 }

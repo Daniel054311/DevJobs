@@ -1,12 +1,7 @@
-<section [ngClass]="{ 'darkMode': isDarkMode }">
+<section >
 
 <main class="mainContainer">
-<h1>Great job</h1>
-@for (job of jobs; track job) {
-<div>
-  <p>Company: {{ job.company }}</p>
-  <p>Position: {{ job.position }}</p>
-</div>
-}
+
+<app-card></app-card>
 </main>
 </section>

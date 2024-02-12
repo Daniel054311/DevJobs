@@ -1,0 +1,13 @@
+main{
+  background-color: var(--primary-color);
+}
+
+.darkMode{
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+button{
+  border: none;
+
+}
