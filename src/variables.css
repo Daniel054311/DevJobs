@@ -1,17 +1,4 @@
 :root {
-  /* --primary-color: #F2F2F2;
-  --secondary-color: #121720;
-  --text-color: #6E8098;
-  --background-color: #ffffff;
-  --job-title-color: #19202D;
-  --job-title-color-darkMode: #19202D;
-  --location-color: #5964e0;
-  --button-color:#5964E0;
-  --dark-background-color:#19202D;
-  --white-color:#ffffff;
-  --border-color:#E7E8E9;
-  --black-color:#19202D; */
-
   /* variables */
  --color-violet: #5964E0;
 --color-light-violet: #939BF4;
@@ -22,6 +9,9 @@
 --color-grey: #9DAEC2;
 --color-dark-grey: #6E8098;
 --color-black: #19202D;
+--background-color-btn-2: #EEEFFC;
+--background-btn-2-hover: #C5C9F4;
+
 }
 :root {
   --background-color-app: var(--color-light-grey);
@@ -32,6 +22,22 @@
   --background-color-btn-2: #EEEFFC;
   --background-color-btn-2-hover: #6E8098;
   --color-btn-2: var(--color-violet);
+  --background-btn-2:var(--background-color-btn-2);
+}
+
+/* font size */
+
+:root{
+  --font:16px;
+  --font:26px;
+  --h1:28px;
+  --h1-line:34px;
+  --h2:24px;
+  --h2-line:29px;
+  --h3:20px;
+  --h3-line:24px;
+  --h4:14px;
+  --h1-line:18px;
 }
 
 .darkMode{
@@ -39,14 +45,17 @@
   --background-color-elements: var(--color-very-dark-blue);
   --color-text: var(--color-white);
   --text-color:var(--color-white);
+  --background-color-btn-3:var(--color-dark-grey);
   --color-checkbox: #313743;
-  --background-color-btn-2: #303642;
-  --background-color-btn-2-hover: #696E76;
+  --background-btn-2: #303642;
+  --background-btn-2-hover: #696E76;
   --color-btn-2: var(--color-white);
 }
 
 button{
   border: none;
 }
+
+
 
 

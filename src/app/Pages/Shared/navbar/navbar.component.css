@@ -9,18 +9,26 @@
   padding: 0 2%;
   margin: -2.5% 10%;
   border-radius: 5px;
+ 
 }
 
 /* Styles for navigation items */
 .navItems {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 32%;
+  gap: 10px;
+  color: var(--text-color);
+}
+.formControl{
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 0 2%;
-  color: var(--text-color);
 }
+
 .navItems input {
   color: var(--text-color);
   transition: all 0.3s;
@@ -38,10 +46,16 @@
   transition: all 0.3s;
   border-left: 2px solid var(--color-checkbox);
   height: 100%;
+  font-size: var(--h2);
+  line-height: var(--h2);
+  font-weight: bold;
+  padding-left: 20px;
+
 }
 .location {
   transition: all 0.3s;
   border-left: 2px solid var(--color-checkbox);
+  padding-left: 20px;
   height: 100%;
 }
 .navItems p {

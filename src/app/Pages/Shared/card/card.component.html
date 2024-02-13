@@ -4,7 +4,7 @@
     <div
       class="cardContainer"
       [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
-      (click)="onSelectJob(job.id)"
+     (click)="onSelectJob(job.id)"
     >
       <div class="image" [style.background-color]="job.logoBackground">
         <img [src]="job.logo" alt="" />
@@ -16,10 +16,10 @@
             <p>.</p>
             <p>{{ job.contract }}</p>
           </div>
-          <h1 class="jobPosition">{{ job.position }}</h1>
+          <div class="jobPosition">{{ job.position }}</div>
           <p>{{ job.company }}</p>
         </div>
-        <p class="jobLocation">{{ job.location }}</p>
+        <h4 class="jobLocation">{{ job.location }}</h4>
       </div>
     </div>
     }

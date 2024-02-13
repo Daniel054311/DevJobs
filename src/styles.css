@@ -9,3 +9,14 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+
+body {
+  background-color: var(--background-color-app);
+}
+
+body.darkMode {
+  transition: all 0.3s;
+  background-color: var(--background-color-app);
+}
+
+

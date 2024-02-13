@@ -1,14 +1,17 @@
 <div class="parentContainer" [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }">
 
 <div class="navItems filterItems">
+  <div class="formControl">
   <button class="searchIconHiddeen"  ><img [src]="search" alt="searchIcon"></button>
   <input [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }" type="text" placeholder="Filter by title, companies, expertise…">
-
+</div>
 </div>
 
 <div class="navItems location">
+  <div class="formControl">
   <button><img style="background-color: transparent"  [src]="location" alt=""></button>
   <input [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }" type="text" placeholder="Filter by location...">
+</div>
 </div>
 
 <div class="navItems checkboxContainer" [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }">
