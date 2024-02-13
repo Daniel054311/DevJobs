@@ -3,7 +3,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ThemeService } from '../../../theme.service';
 import { JobsService } from '../../../jobs.service';
 import { Job } from '../../../job';
-import { NavbarComponent } from '../filter/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-header',

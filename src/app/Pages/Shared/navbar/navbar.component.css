@@ -3,14 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var( --background-color);
+  transition: all 0.3s;
+  background-color: var(--background-color-elements);
   height: 10vh;
   padding: 0 2%;
   margin: -2.5% 10%;
   border-radius: 5px;
-}
-.darkMode{
-background-color: var(--dark-background-color);
 }
 
 /* Styles for navigation items */
@@ -21,30 +19,33 @@ background-color: var(--dark-background-color);
   align-items: center;
   gap: 10px;
   padding: 0 2%;
-
+  color: var(--text-color);
 }
-.filterIconsWrapper{
+.navItems input {
+  color: var(--text-color);
+  transition: all 0.3s;
+  background-color: var(--background-color-elements);
+}
+
+.filterIconsWrapper {
   display: none;
 }
 
- .icons{
+.icons {
   display: none;
 }
-.checkboxContainer  {
-  border-left: 2px solid var(--border-color);
+.checkboxContainer {
+  transition: all 0.3s;
+  border-left: 2px solid var(--color-checkbox);
   height: 100%;
 }
 .location {
-  border-left: 2px solid var(--border-color);
+  transition: all 0.3s;
+  border-left: 2px solid var(--color-checkbox);
   height: 100%;
 }
-.navItems .darkMode{
-  background-color: var(--dark-background-color);
-  color: var(--white);
-}
-.navItems p{
+.navItems p {
   font-weight: bold;
-  color: #19202D;
 }
 
 /* style all input  */
@@ -53,22 +54,25 @@ input[type="text"] {
   border: none;
 }
 
-
 /* styles for the icons */
 
-button{
+button {
   background-color: transparent;
 }
-.search{
+
+.search {
   padding: 10px 20px;
-  background-color: #5964E0;
-  color: #fff;
+  background-color: var(--color-violet);
+  color: var(--color-white);
   font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
-  cursor: pointer;
 }
 
+.search:hover{
+  cursor: pointer;
+  background-color: var(--color-light-violet);
+}
 /* Styles for checkbox item */
 .checkboxItem {
   display: flex;
@@ -110,7 +114,7 @@ button{
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #5964E0;
+  background-color: #5964e0;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -137,10 +141,10 @@ button{
   transform: rotate(45deg);
 }
 
-@media  screen and (max-width: 900px){
-  .parentContainer{
+@media screen and (max-width: 900px) {
+  .parentContainer {
     justify-content: space-between;
-align-items: center;
+    align-items: center;
   }
 
   .navItems:nth-child(1),
@@ -148,31 +152,28 @@ align-items: center;
   .navItems:nth-child(3) {
     display: none;
   }
-.darkMode .filterIcon img{
-  filter: brightness(0) invert(1);
-}
+  .darkMode .filterIcon img {
+    filter: brightness(0) invert(1);
+  }
 
- .filterItems{
+  .filterItems {
     display: flex;
-   justify-content: space-between;
-   gap: 5%;
-  border: 2px solid red;
+    justify-content: space-between;
+    gap: 5%;
   }
-  .filterIconsWrapper{
-  display: block;
+  .filterIconsWrapper {
+    display: block;
   }
-    .icons{
-   display: block;
-   display: flex;
-   gap: 20px;
+  .icons {
+    display: block;
+    display: flex;
+    gap: 20px;
   }
 
-
-
-  .searchIcon{
+  .searchIcon {
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--button-color);
+    background-color: var(--color-violet);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +182,4 @@ align-items: center;
     filter: brightness(0) invert(1);
     width: 20px;
   }
-
-
-
 }

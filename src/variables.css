@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #F2F2F2;
+  /* --primary-color: #F2F2F2;
   --secondary-color: #121720;
   --text-color: #6E8098;
   --background-color: #ffffff;
@@ -10,7 +10,39 @@
   --dark-background-color:#19202D;
   --white-color:#ffffff;
   --border-color:#E7E8E9;
-  --black-color:#19202D;
+  --black-color:#19202D; */
+
+  /* variables */
+ --color-violet: #5964E0;
+--color-light-violet: #939BF4;
+--color-very-dark-blue: #19202D;
+--color-midnight: #121721;
+--color-white: #fff;
+--color-light-grey: #F4F6F8;
+--color-grey: #9DAEC2;
+--color-dark-grey: #6E8098;
+--color-black: #19202D;
+}
+:root {
+  --background-color-app: var(--color-light-grey);
+  --background-color-elements: var(--color-white);
+  --color-text: var(--color-very-dark-blue);
+  --color-checkbox: #E7E8E9;
+  --text-color:var(--color-black);
+  --background-color-btn-2: #EEEFFC;
+  --background-color-btn-2-hover: #6E8098;
+  --color-btn-2: var(--color-violet);
+}
+
+.darkMode{
+  --background-color-app: var(--color-midnight);
+  --background-color-elements: var(--color-very-dark-blue);
+  --color-text: var(--color-white);
+  --text-color:var(--color-white);
+  --color-checkbox: #313743;
+  --background-color-btn-2: #303642;
+  --background-color-btn-2-hover: #696E76;
+  --color-btn-2: var(--color-white);
 }
 
 button{

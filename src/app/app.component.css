@@ -1,10 +1,5 @@
 main{
-  background-color: var(--primary-color);
-}
-
-.darkMode{
-  background-color: var(--secondary-color);
-  color: #fff;
+  background-color: var(--background-color-app);
 }
 
 button{

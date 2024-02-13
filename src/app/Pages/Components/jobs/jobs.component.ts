@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from '../../Shared/filter/navbar.component';
+import { NavbarComponent } from '../../Shared/navbar/navbar.component';
 import { JobsService } from '../../../jobs.service';
 import { Job } from '../../../job';
 import { NgClass } from '@angular/common';
