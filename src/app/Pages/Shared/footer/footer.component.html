@@ -1,1 +1,10 @@
-<p>footer works!</p>
+<footer  [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }">
+  <div class="parentContainer">
+    <div class="positionContainer">
+      <h3>{{job?.position}}</h3>
+      <p>{{job?.company}}</p>
+    </div>
+
+   <button class="applyButton">Apply Now</button>
+  </div>
+</footer>
