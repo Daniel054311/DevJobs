@@ -1,25 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Job } from '../../../job';
-import { JobsService } from '../../../jobs.service';
 import { ThemeService } from '../../../theme.service';
-
+import { FormsModule } from '@angular/forms';
+import { JobsService } from '../../../jobs.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
 
   search: string = "../../../../assets/desktop/icon-search.svg";
-  location: string = "../../../../assets/desktop/icon-location.svg";
+  locationImg: string = "../../../../assets/desktop/icon-location.svg";
   checkBox: string = "../../../../assets/desktop/icon-check.svg";
   filterIcon: string = "../../../../assets/mobile/icon-filter.svg";
 
-  jobs: Job[] = [];
+  position: string = '';
+  location: string = '';
+  fullTimeOnly: boolean = false;
 
   constructor(
     private jobsService: JobsService,
@@ -29,14 +30,14 @@ export class NavbarComponent {
   }
 
   ngOnInit(): void {
-    this.loadJobs();
+
   }
 
-  loadJobs() {
-    this.jobsService.getAllJobs().subscribe((jobs) => {
-      this.jobs = jobs;
-      console.log(jobs);
-    });
+  applyFilter(position: string, location: string, fullTimeOnly: boolean) {
+    // Update filter criteria in the FilterService
+    this.jobsService.position = position;
+    this.jobsService.location = location;
+    this.jobsService.fullTimeOnly = fullTimeOnly;
   }
 
   get isDarkMode(): boolean {

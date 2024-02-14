@@ -11,6 +11,11 @@ export class JobsService {
   private apiUrl = 'http://localhost:3000/jobs';
   private readonly STORAGE_KEY = 'jobDetails';
 
+  // variable to filter the jobs
+  position: string = '';
+  location: string = '';
+  fullTimeOnly: boolean = false;
+
   constructor(private http: HttpClient) {}
 
   getAllJobs(): Observable<Job[]> {
@@ -37,6 +42,9 @@ export class JobsService {
       );
     }
   }
+
+
+
 
 
 }

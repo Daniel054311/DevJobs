@@ -9,7 +9,6 @@
   padding: 0 2%;
   margin: -2.5% 10%;
   border-radius: 5px;
- 
 }
 
 /* Styles for navigation items */
@@ -22,7 +21,12 @@
   gap: 10px;
   color: var(--text-color);
 }
-.formControl{
+
+input {
+  caret-color: #5964e0;
+}
+
+.formControl {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +54,6 @@
   line-height: var(--h2);
   font-weight: bold;
   padding-left: 20px;
-
 }
 .location {
   transition: all 0.3s;
@@ -75,7 +78,8 @@ button {
 }
 
 .search {
-  padding: 10px 20px;
+  width: 141px;
+  height: 48px;
   background-color: var(--color-violet);
   color: var(--color-white);
   font-size: 16px;
@@ -83,7 +87,7 @@ button {
   border-radius: 5px;
 }
 
-.search:hover{
+.search:hover {
   cursor: pointer;
   background-color: var(--color-light-violet);
 }
@@ -102,7 +106,7 @@ button {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: var(--h3);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -159,6 +163,7 @@ button {
   .parentContainer {
     justify-content: space-between;
     align-items: center;
+    margin: -8.5% 10%;
   }
 
   .navItems:nth-child(1),
