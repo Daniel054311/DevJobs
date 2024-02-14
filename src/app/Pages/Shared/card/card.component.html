@@ -1,6 +1,6 @@
 <section class="cardWrapper">
   <div class="parentContainer">
-    @for (job of jobs; track job) {
+    @for (job of getFilteredJobs(); track job) {
     <div
       class="cardContainer"
       [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
