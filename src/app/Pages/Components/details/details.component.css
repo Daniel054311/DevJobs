@@ -9,6 +9,7 @@
 }
 .topBar{
   background-color: var( --background-color-elements);
+  transition: all 0.3s;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +32,8 @@
   color: var( --color-btn-2);
   font-weight: bold;
   cursor: pointer;
-  padding: 10px;
+  width: 141px;
+  height: 48px;
  margin-right: 4%;
  border-radius: 5px;
 }
@@ -56,6 +58,7 @@
 
 .detailsContainer{
   background-color: var( --background-color-elements);
+  transition: all 0.3s;
   display: flex;
   gap: 30px;
   flex-direction: column;
@@ -86,6 +89,12 @@ gap: 10px;
   border-radius: 5px;
   color: var(--color-white);
   background-color: var( --color-violet);
+
+}
+
+.applyContainer button:hover{
+  transition: all 0.3s;
+background-color: var( --color-light-violet);
 }
 
 li::marker{
@@ -137,6 +146,10 @@ h4{
 
 /* topBar Media query */
 @media screen and (max-width:600px) {
+  .parentContainer{
+    margin: -3% 10%;
+  }
+
   .topBar{
     display: flex;
     flex-direction: column;
