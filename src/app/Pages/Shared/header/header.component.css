@@ -13,7 +13,9 @@
   font-weight: bold;
 }
 
-
+.title{
+  cursor: pointer;
+}
 
 .toggle{
   display: flex;
@@ -55,9 +57,13 @@
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: #939BF4;
+  background-color: var( --color-violet);
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.slider:hover:before {
+  background-color: var(--color-light-violet); /* Change the background color on hover */
 }
 
 input:checked + .slider {
@@ -85,6 +91,7 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 900px) {
   .headerContainer {
+    width: 100%;
     padding: 45px 10%;
     background-image: url('../../../../assets/mobile/bg-pattern-header-2.svg');
   }
