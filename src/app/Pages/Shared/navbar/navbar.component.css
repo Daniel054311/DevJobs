@@ -153,6 +153,13 @@ background-color: var(--background-btn-2);
   .Only{
     display: none;
   }
+  /* span{
+    font-size: var(--h4);
+  } */
+  .search{
+    width: 80px;
+    height: 40px;
+   }
 }
 
 @media screen and (max-width: 940px) {
@@ -168,7 +175,9 @@ background-color: var(--background-btn-2);
   .navItems:nth-child(3) {
     display: none;
   }
-
+/* span{
+  font-size: var(--h4);
+} */
   .darkMode .filterIcon img {
     filter: brightness(0) invert(1);
   }

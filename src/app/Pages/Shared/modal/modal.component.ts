@@ -37,8 +37,9 @@ export class ModalComponent {
     this.modalService.toggleModal(false);
   }
 
-  applyFilter( location: string, fullTimeOnly: boolean) {
+  applyFilter(position: string, location: string, fullTimeOnly: boolean) {
     // Update filter criteria in the FilterService
+    this.jobsService.position = position;
     this.jobsService.location = location;
     this.jobsService.fullTimeOnly = fullTimeOnly;
     this.closeModal()
