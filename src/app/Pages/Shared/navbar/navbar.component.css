@@ -7,7 +7,8 @@
   background-color: var(--background-color-elements);
   height: 10vh;
   padding: 0 2%;
-  margin: -2.5% 10%;
+  margin: -30px 10%;
+  width: 80%;
   border-radius: 5px;
 }
 
@@ -20,10 +21,6 @@
   width: 32%;
   gap: 10px;
   color: var(--text-color);
-}
-
-input {
-  caret-color: #5964e0;
 }
 
 .formControl {
@@ -39,46 +36,30 @@ input {
   background-color: var(--background-color-elements);
 }
 
-.filterIconsWrapper {
-  display: none;
-}
-
+.filterIconsWrapper,
 .icons {
   display: none;
 }
-.checkboxContainer {
-  transition: all 0.3s;
-  border-left: 2px solid var(--color-checkbox);
-  height: 100%;
-  font-size: var(--h2);
-  line-height: var(--h2);
-  font-weight: bold;
-  padding-left: 20px;
-}
+
+.checkboxContainer,
 .location {
   transition: all 0.3s;
   border-left: 2px solid var(--color-checkbox);
   padding-left: 20px;
   height: 100%;
 }
+
 .navItems p {
   font-weight: bold;
 }
 
-/* style all input  */
-input[type="text"] {
-  outline: none; /* Removes the border */
-  border: none;
-}
-
 /* styles for the icons */
-
 button {
   background-color: transparent;
 }
 
 .search {
-  width: 141px;
+  width: 100px;
   height: 48px;
   background-color: var(--color-violet);
   color: var(--color-white);
@@ -91,6 +72,12 @@ button {
   cursor: pointer;
   background-color: var(--color-light-violet);
 }
+
+span {
+  font-size: var(--h3);
+  font-weight: bold;
+}
+
 /* Styles for checkbox item */
 .checkboxItem {
   display: flex;
@@ -101,7 +88,7 @@ button {
 }
 
 /* checkbox css */
-.container {
+.labelContainer {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -112,7 +99,7 @@ button {
   -ms-user-select: none;
   user-select: none;
 }
-.container input {
+.labelContainer input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -130,9 +117,12 @@ button {
   background-color: #eee;
 }
 
+.checkmark:hover{
+background-color: var(--background-btn-2);
+}
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #5964e0;
+.labelContainer input:checked ~ .checkmark {
+  background-color: var( --color-violet);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -143,11 +133,11 @@ button {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.labelContainer input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.labelContainer .checkmark:after {
   left: 9px;
   top: 2px;
   width: 8px;
@@ -159,11 +149,18 @@ button {
   transform: rotate(45deg);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1072px){
+  .Only{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 940px) {
   .parentContainer {
     justify-content: space-between;
     align-items: center;
-    margin: -8.5% 10%;
+    margin: -30px 10%;
+    position: absolute;
   }
 
   .navItems:nth-child(1),
@@ -171,6 +168,7 @@ button {
   .navItems:nth-child(3) {
     display: none;
   }
+
   .darkMode .filterIcon img {
     filter: brightness(0) invert(1);
   }
@@ -182,6 +180,7 @@ button {
   }
   .filterIconsWrapper {
     display: block;
+    width: 100%;
   }
   .icons {
     display: block;

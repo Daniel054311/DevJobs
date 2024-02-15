@@ -75,9 +75,9 @@ font-weight: bold;
 }
 .loadMore{
 margin-top: 40px;
-width: 141px;
-margin: auto;
+width: 100px;
 height: 48px;
+margin: auto;
 border-radius: 5px;
 background-color: var( --color-violet);
 color: var(--color-white);
@@ -88,14 +88,15 @@ font-weight: bold;
   background-color: var(--color-light-violet);
 }
 
-@media screen and (min-width: 601px) and (max-width: 900px) {
+@media screen and (min-width: 601px) and (max-width: 1072px) {
   .parentContainer{
     grid-template-columns: 1fr 1fr;
    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 940px){
   .parentContainer{
+    margin: 20px 0;
    grid-template-columns: 1fr ;
   }
 }

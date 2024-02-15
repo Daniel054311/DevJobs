@@ -35,8 +35,8 @@
     [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
   >
     <div class="checkboxItem">
-      <label class="container"
-        >Full Time Only
+      <label class="labelContainer"
+        ><span>Full Time <span class="Only">Only</span></span>
         <input type="checkbox" [(ngModel)]="fullTimeOnly" />
         <span class="checkmark"></span>
       </label>
@@ -64,7 +64,7 @@
 
   <div class="navItems icons">
     <button class="filterIcon">
-      <img [src]="filterIcon" alt="filterIcon" />
+      <img  (click)=" openModal()" [src]="filterIcon" alt="filterIcon" />
     </button>
     <button (click)="applyFilter(position, location, fullTimeOnly)" class="searchIcon"><img [src]="search" alt="searchIcon" /></button>
   </div>

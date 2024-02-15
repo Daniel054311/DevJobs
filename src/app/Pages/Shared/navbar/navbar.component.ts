@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ThemeService } from '../../../theme.service';
 import { FormsModule } from '@angular/forms';
 import { JobsService } from '../../../jobs.service';
+import { ModalComponent } from "../modal/modal.component";
+import { ModalService } from '../../../modal.service';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule,FormsModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+    selector: 'app-navbar',
+    standalone: true,
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.css',
+    imports: [CommonModule, FormsModule, ModalComponent]
 })
 export class NavbarComponent {
 
@@ -22,15 +24,21 @@ export class NavbarComponent {
   location: string = '';
   fullTimeOnly: boolean = false;
 
+
+
   constructor(
     private jobsService: JobsService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+   private modalService: ModalService
   ) {
 
   }
 
   ngOnInit(): void {
 
+  }
+  openModal() {
+    this.modalService.toggleModal(true);
   }
 
   applyFilter(position: string, location: string, fullTimeOnly: boolean) {
