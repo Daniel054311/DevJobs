@@ -23,6 +23,7 @@
   --background-color-btn-2-hover: #6E8098;
   --color-btn-2: var(--color-violet);
   --background-btn-2:var(--background-color-btn-2);
+  --modal-overlay:rgba(54, 54, 54, 0.85);
 }
 
 /* font size */
@@ -50,11 +51,10 @@
   --background-btn-2: #303642;
   --background-btn-2-hover: #696E76;
   --color-btn-2: var(--color-white);
+  --modal-overlay:rgba(19, 19, 19, 0.85);
 }
 
-button{
-  border: none;
-}
+
 
 
 

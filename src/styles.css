@@ -19,4 +19,15 @@ body.darkMode {
   background-color: var(--background-color-app);
 }
 
+/* style all input  */
+input[type="text"] {
+  outline: none; /* Removes the border */
+  border: none;
+  caret-color: #5964e0;
+  background-color: var(--background-color-elements);
+  color: var(  --color-text);
+}
 
+button{
+  border: none;
+}

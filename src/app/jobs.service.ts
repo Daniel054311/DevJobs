@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Job } from './job';
-import { catchError, map, of } from 'rxjs';
+import { Subject, catchError, map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +16,18 @@ export class JobsService {
   location: string = '';
   fullTimeOnly: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  private showModalSubject = new Subject<boolean>();
+  showModal$ = this.showModalSubject.asObservable();
+
+  constructor(private http: HttpClient) { }
+
+  openModal() {
+    this.showModalSubject.next(true);
+  }
+
+  closeModal() {
+    this.showModalSubject.next(false);
+  }
 
   getAllJobs(): Observable<Job[]> {
     return this.http.get<Job[]>(`${this.apiUrl}`);
