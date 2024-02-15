@@ -15,7 +15,8 @@ import { Router } from '@angular/router';
 })
 export class CardComponent {
   jobs: Job[] = [];
-
+  loading: boolean = true;
+  errorMessage: boolean = false;
 
   constructor(
     private router: Router,
@@ -38,6 +39,15 @@ export class CardComponent {
     // Route user to details page with the ID of the selected job
     this.router.navigate(['/app-details', jobId]);
   }
+
+  isLoading():void|boolean {
+    if (this.getFilteredJobs().length < 1) {
+      this.loading = true;
+    } else {
+      this.loading = false;
+      this.errorMessage = true;
+  }
+}
 
   getFilteredJobs(): Job[] {
     // Retrieve filter criteria from FilterService

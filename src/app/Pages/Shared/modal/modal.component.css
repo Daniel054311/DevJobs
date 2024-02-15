@@ -87,8 +87,8 @@ background-color: var(--color-light-violet);
 
 span{
   font-weight: bold;
-  font-size: var(--h3);
-  line-height: var(--h3);
+  font-size: var(--h4);
+  line-height: var(--h4);
 }
 
 /* checkbox css */

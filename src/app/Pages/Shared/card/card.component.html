@@ -1,4 +1,9 @@
 <section class="cardWrapper">
+  @if (  isLoading()) {
+    <div>
+      Loading.....
+    </div>
+  }@else {
   <div class="parentContainer">
     @for (job of getFilteredJobs(); track job) {
     <div
@@ -24,5 +29,12 @@
     </div>
     }
   </div>
+}
+
+@if (getFilteredJobs().length !==0 ) {
   <button class="loadMore">Load More</button>
+}@else if(errorMessage) {
+  <div class="errorMessage">No job found</div>
+}
+
 </section>

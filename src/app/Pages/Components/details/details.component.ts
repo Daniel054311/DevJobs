@@ -22,7 +22,6 @@ export class DetailsComponent implements OnInit{
       const jobId = +params['id'];
       this.jobsService.getJobDetails(jobId).subscribe(job => {
         this.job = job;
-        console.log(job)
       });
     });
   }

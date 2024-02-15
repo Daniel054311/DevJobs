@@ -69,12 +69,14 @@ button {
 }
 
 .search:hover {
+  transition: all 0.3s;
   cursor: pointer;
   background-color: var(--color-light-violet);
 }
 
 span {
-  font-size: var(--h3);
+  font-size: var(--h4);
+  line-height: var(--h4);
   font-weight: bold;
 }
 
@@ -117,12 +119,13 @@ span {
   background-color: #eee;
 }
 
-.checkmark:hover{
-background-color: var(--background-btn-2);
+.checkmark:hover {
+  transition: all 0.3s;
+  background-color: var(--background-btn-2);
 }
 /* When the checkbox is checked, add a blue background */
 .labelContainer input:checked ~ .checkmark {
-  background-color: var( --color-violet);
+  background-color: var(--color-violet);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -149,17 +152,17 @@ background-color: var(--background-btn-2);
   transform: rotate(45deg);
 }
 
-@media screen and (max-width: 1072px){
-  .Only{
+@media screen and (max-width: 1072px) {
+  .Only {
     display: none;
   }
   /* span{
     font-size: var(--h4);
   } */
-  .search{
+  .search {
     width: 80px;
     height: 40px;
-   }
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -175,7 +178,7 @@ background-color: var(--background-btn-2);
   .navItems:nth-child(3) {
     display: none;
   }
-/* span{
+  /* span{
   font-size: var(--h4);
 } */
   .darkMode .filterIcon img {
@@ -204,6 +207,11 @@ background-color: var(--background-btn-2);
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .searchIcon:hover {
+    transition: all 0.4s;
+    cursor: pointer;
+    background-color: var(--color-light-violet);
   }
   .searchIcon img {
     filter: brightness(0) invert(1);
