@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent {
   jobs: Job[] = [];
-  loading: boolean = true;
+  loading: boolean = false;
   errorMessage: boolean = false;
 
   constructor(
@@ -30,9 +30,15 @@ export class CardComponent {
 
 
   loadJobs() {
+    this.loading = true;
     this.jobsService.getAllJobs().subscribe((jobs) => {
       this.jobs = jobs;
-    });
+      this.errorMessage = true;
+    },
+      (err) => {
+        this.errorMessage = err;
+      }
+    );
   }
 
   onSelectJob(jobId: number) {
@@ -40,16 +46,12 @@ export class CardComponent {
     this.router.navigate(['/app-details', jobId]);
   }
 
-  isLoading():void|boolean {
-    if (this.getFilteredJobs().length === 0) {
-      this.loading = true;
-    } else {
-      this.loading = false;
-      this.errorMessage = true;
+  isLoading(): boolean {
+    return this.jobs.length === 0 && !this.errorMessage;
   }
-}
 
   getFilteredJobs(): Job[] {
+    this.loading = true;
     // Retrieve filter criteria from FilterService
     const position = this.jobsService.position;
     const location = this.jobsService.location;
@@ -69,6 +71,7 @@ export class CardComponent {
     if (fullTimeOnly) {
       filteredJobs = filteredJobs.filter(job => job.contract === 'Full Time');
     }
+    this.loading = true;
 
     return filteredJobs;
   }

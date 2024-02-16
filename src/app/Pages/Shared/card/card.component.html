@@ -1,9 +1,9 @@
 <section class="cardWrapper">
   @if (  isLoading()) {
-    <div>
-      Loading.....
+    <div class="loading">
+      Loading...
     </div>
-  }@else {
+  }
   <div class="parentContainer">
     @for (job of getFilteredJobs(); track job) {
     <div
@@ -29,7 +29,7 @@
     </div>
     }
   </div>
-}
+
 
 @if (getFilteredJobs().length !==0 ) {
   <button class="loadMore">Load More</button>

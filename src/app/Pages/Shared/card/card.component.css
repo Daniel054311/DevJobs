@@ -4,7 +4,13 @@
   justify-content: center;
   padding: 5% 10%;
 }
-
+.loading{
+  color: var(--color-violet);
+  font-size: var(--h4);
+  line-height: var(--h4);
+  font-weight: bold;
+  margin: auto;
+}
 .parentContainer{
  display: grid;
 grid-template-columns: 1fr 1fr 1fr;
