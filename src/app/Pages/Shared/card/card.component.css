@@ -66,7 +66,7 @@ font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -12%;
+  margin-top: -45px;
   margin-bottom: 10px;
   position: relative;
   width:50px;
@@ -94,15 +94,31 @@ font-weight: bold;
   background-color: var(--color-light-violet);
 }
 
-@media screen and (min-width: 601px) and (max-width: 1072px) {
+@media screen  and (max-width: 1072px) {
   .parentContainer{
     grid-template-columns: 1fr 1fr;
    }
+   .image{
+    margin-top: -45px;
+  }
 }
 
 @media screen and (max-width: 940px){
   .parentContainer{
-    margin: 20px 0;
+    margin: 40px 0;
    grid-template-columns: 1fr ;
+  }
+  .image{
+    margin-top: -55px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .parentContainer{
+    margin: 40px 0;
+   grid-template-columns: 1fr ;
+  }
+  .image{
+    margin-top: -45px;
   }
 }

@@ -1,3 +1,6 @@
+
+
+
 .modal {
   position: fixed;
   left: 0;
@@ -6,6 +9,7 @@
   height: 100%;
   padding: 0 10%;
   z-index: 990;
+  display: none;
 }
 
 .modal .overlay {
@@ -27,18 +31,19 @@
   background-color: var(--background-color-elements);
   color: var(--text-color);
   box-sizing: border-box;
-  padding: 20px;
+  /* padding: 20px 0; */
   box-shadow: 0 1px 5px var(--modal-overlay);
   border-radius: 4px;
   width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+
 }
 
 .modalContent .search{
   height: 48px;
   border-radius: 5px;
+  margin: 20px 20px;
   background-color: var(--color-violet);
   color: var(--color-white);
   font-size: 16px;
@@ -50,45 +55,31 @@ cursor: pointer;
 background-color: var(--color-light-violet);
 }
 
-/* .modal .closeModal {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  opacity: 0.5;
-  border: none;
-  transition: opacity 0.2s ease;
-}
-
-.modal .closeModal:hover {
-  opacity: 0.9;
-}
- */
 
 /* location styles */
 
 .locationContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
-  width: 32%;
-  gap: 10px;
+  padding: 20px 20px;
   color: var(--text-color);
+  border-bottom: 2px solid var(--color-checkbox);
+  width: 100%;
 }
 
 /* Styles for checkbox item */
 .checkboxItem {
   display: flex;
   flex-direction: row;
+  padding: 10px 20px;
   gap: 10px;
+
 }
 
 span{
   font-weight: bold;
-  font-size: var(--h4);
-  line-height: var(--h4);
 }
 
 /* checkbox css */
@@ -148,4 +139,11 @@ span{
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 940px)
+{
+  .modal{
+    display: block;
+  }
 }

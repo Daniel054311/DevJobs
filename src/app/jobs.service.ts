@@ -16,18 +16,16 @@ export class JobsService {
   location: string = '';
   fullTimeOnly: boolean = false;
 
-  private showModalSubject = new Subject<boolean>();
-  showModal$ = this.showModalSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
-  openModal() {
-    this.showModalSubject.next(true);
+  applyFilter(position: string, location: string, fullTimeOnly: boolean) {
+    // Update filter criteria
+    this.position = position;
+    this.location = location;
+    this.fullTimeOnly = fullTimeOnly;
   }
 
-  closeModal() {
-    this.showModalSubject.next(false);
-  }
 
   getAllJobs(): Observable<Job[]> {
     return this.http.get<Job[]>(`${this.apiUrl}`);

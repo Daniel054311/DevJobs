@@ -41,7 +41,7 @@ export class CardComponent {
   }
 
   isLoading():void|boolean {
-    if (this.getFilteredJobs().length < 1) {
+    if (this.getFilteredJobs().length === 0) {
       this.loading = true;
     } else {
       this.loading = false;

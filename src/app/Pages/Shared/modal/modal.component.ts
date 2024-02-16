@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ModalService } from '../../../modal.service';
 import { JobsService } from '../../../jobs.service';
@@ -13,10 +13,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './modal.component.css',
 })
 export class ModalComponent {
+  @Output() positionEmitter: EventEmitter<string> = new EventEmitter<string>();
+
   locationImg: string = '../../../../assets/desktop/icon-location.svg';
-
   isVisible: boolean = false;
-
   position: string = '';
   location: string = '';
   fullTimeOnly: boolean = false;
@@ -29,6 +29,11 @@ export class ModalComponent {
     });
   }
 
+  ngOnInit() {
+
+  }
+
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
@@ -37,11 +42,12 @@ export class ModalComponent {
     this.modalService.toggleModal(false);
   }
 
-  applyFilter(position: string, location: string, fullTimeOnly: boolean) {
-    // Update filter criteria in the FilterService
-    this.jobsService.position = position;
-    this.jobsService.location = location;
-    this.jobsService.fullTimeOnly = fullTimeOnly;
+  applyFilter(location: string, fullTimeOnly: boolean) {
+    const position = this.modalService.position;
+    this.jobsService.applyFilter(position, location, fullTimeOnly);
+    // this.jobsService.applyFilter(position, location, fullTimeOnly);
+    // console.log(position)
     this.closeModal()
   }
+
 }

@@ -75,8 +75,8 @@ button {
 }
 
 span {
-  font-size: var(--h4);
-  line-height: var(--h4);
+  /* font-size: var(--h4);
+  line-height: var(--h4); */
   font-weight: bold;
 }
 

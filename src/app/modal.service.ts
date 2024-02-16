@@ -5,12 +5,16 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ModalService {
+
+  position: string = '';
+
   private isVisibleSubject = new Subject<boolean>();
   isVisible$ = this.isVisibleSubject.asObservable();
 
   constructor() {}
 
-  toggleModal(isVisible: boolean) {
+  toggleModal(isVisible: boolean, position: string = '') {
     this.isVisibleSubject.next(isVisible);
+    this.position = position;
   }
 }
