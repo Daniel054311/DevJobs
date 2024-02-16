@@ -11,7 +11,6 @@
   background-color: var(--background-color-elements);
   transition: all 0.3s;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 15vh;
@@ -65,7 +64,6 @@
 
 .applyContainer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .datePosted {
