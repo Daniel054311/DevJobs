@@ -1,4 +1,8 @@
+[build]
+  command = "ng build --prod"
+  publish = "dist/devjobs"
+
 [[redirects]]
-from = "/*"
-to ="index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
