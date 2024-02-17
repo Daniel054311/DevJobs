@@ -8,7 +8,7 @@ import { Subject, catchError, map, of } from 'rxjs';
   providedIn: 'root',
 })
 export class JobsService {
-  private apiUrl = 'http://localhost:3000/jobs';
+  private apiUrl = 'https://64281ee346fd35eb7c4bfc31.mockapi.io/dev';
   private readonly STORAGE_KEY = 'jobDetails';
 
   // variable to filter the jobs
@@ -40,8 +40,8 @@ export class JobsService {
       return this.http.get<Job>(`${this.apiUrl}/${jobId}`).pipe(
         map(job => {
           // Cache job details in local storage
-          localStorage.setItem(`${this.STORAGE_KEY}_${jobId}`, JSON.stringify(job));
-          return job;
+        localStorage.setItem(`${this.STORAGE_KEY}_${jobId}`, JSON.stringify(job));
+        return job;
         }),
         catchError((error: any) => {
           // Handle error if API request fails

@@ -4,18 +4,18 @@
   <div (click)="closeModal() " class="overlay"></div>
   <div class="modalContent">
     <!-- Dynamic Section -->
-    <div class="locationContainer">
+      <div class="locationContainer">
       <img [src]="locationImg" alt="location image">
       <input   [(ngModel)]="location" type="text" placeholder="Filter by location…">
     </div>
 
     <div class="checkboxItem">
-      <label class="labelContainer"
+        <label class="labelContainer"
         >
         <input type="checkbox"  [(ngModel)]="fullTimeOnly" />
         <span class="checkmark"></span>
-      </label>
-      <span>Full Time Only</span>
+        </label>
+        <span>Full Time Only</span>
     </div>
 
   <button class="search" type="submit" (click)="applyFilter(location, fullTimeOnly)" >Search</button>
