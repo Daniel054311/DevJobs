@@ -1,62 +1,71 @@
-<section>
+  <section>
+
+  @if (loading) {
+ <div class="loading"> loading...</div>
+ }
+
   <div class="parentContainer">
-    @if (job) {
-    <div class="topBar">
-      <div class="companyNameContainer">
-        <div
-          [style.background-color]="job.logoBackground"
-          class="companyNameBg"
-        >
-          <img [src]="job.logo" [alt]="job.company" />
-        </div>
-        <div class="name">
-          <h1 class="companyName bold">{{ job.company }}</h1>
-          <p>{{ job.website }}</p>
-        </div>
-      </div>
-      <button class="siteButton">Company Site</button>
-    </div>
+
+   @if (job) {
+  <div class="topBar">
+
+  <div class="companyNameContainer">
+  <div
+   [style.background-color]="job.logoBackground"
+   class="companyNameBg">
+   <img [src]="job.logo" [alt]="job.company" />
+   </div>
+   <div class="name">
+   <h1 class="companyName bold">{{ job.company }}</h1>
+   <p>{{ job.website }}</p>
+   </div>
+   </div>
+
+   <button class="siteButton">Company Site</button>
+   </div>
 
     <div class="detailsContainer">
-      <div class="applyContainer">
-        <div class="applyWrapper">
-          <div class="datePosted">
-            <p>{{ job.postedAt }}</p>
-            <p>.</p>
-            <p>{{ job.contract }}</p>
-          </div>
-          <div class="position">{{ job.position }}</div>
-          <h4>{{job.location}}</h4>
-        </div>
-        <button>Apply Now</button>
-      </div>
 
-      <div>{{ job.description }}</div>
-      <h3>Requirements</h3>
+    <div class="applyContainer">
+    <div class="applyWrapper">
+    <div class="datePosted">
+    <p>{{ job.postedAt }}</p>
+    <p>.</p>
+    <p>{{ job.contract }}</p>
+    </div>
+    <div class="position">{{ job.position }}</div>
+    <h4>{{job.location}}</h4>
+    </div>
+    <button>Apply Now</button>
+    </div>
 
-      <div class="requirementContainer">
-        <p>{{ job.requirements.content }}</p>
-        <ul>
-          @for (list of job.requirements.items; track list ) {
-          <li>{{ list }}</li>
-          }
-        </ul>
-      </div>
+    <div>{{ job.description }}</div>
+    <h3>Requirements</h3>
 
-      <h3>What You will Do</h3>
+    <div class="requirementContainer">
+    <p>{{ job.requirements.content }}</p>
+    <ul>
+    @for (list of job.requirements.items; track list ) {
+    <li>{{ list }}</li>
+     }
+    </ul>
+     </div>
 
-      <div class="jobRoleContainer">
-        <p>{{ job.role.content }}</p>
-        <ol>
-          @for (roles of job.role.items; track roles ) {
-          <li>{{ roles }}</li>
-          }
-        </ol>
-      </div>
+    <h3>What You will Do</h3>
+
+    <div class="jobRoleContainer">
+    <p>{{ job.role.content }}</p>
+    <ol>
+     @for (roles of job.role.items; track roles ) {
+    <li>{{ roles }}</li>
+     }
+    </ol>
+    </div>
     </div>
     }
-  </div>
-</section>
-<app-footer
-app-footer
-></app-footer>
+    </div>
+
+    </section>
+    <app-footer
+    app-footer
+    ></app-footer>

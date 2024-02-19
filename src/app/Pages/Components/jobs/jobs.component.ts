@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../Shared/navbar/navbar.component';
-import { JobsService } from '../../../jobs.service';
 import { NgClass } from '@angular/common';
 import { CardComponent } from '../../Shared/card/card.component';
 import { ModalComponent } from "../../Shared/modal/modal.component";
-import { ModalService } from '../../../modal.service';
+
 
 @Component({
     selector: 'app-jobs',
@@ -14,15 +13,13 @@ import { ModalService } from '../../../modal.service';
     imports: [NavbarComponent, NgClass, CardComponent, ModalComponent]
 })
 export class JobsComponent implements OnInit {
-  
-  showModal: boolean = false;
 
-  constructor(private modalService: ModalService) {}
+
+
+  constructor() {}
 
   ngOnInit(): void { }
 
- openModal() {
-    this.showModal = true;
-  }
+  
 
 }

@@ -7,6 +7,10 @@
   gap: 30px;
   border-radius: 6px;
 }
+.loading{
+  margin: auto;
+  color: var(--color-violet);
+}
 .topBar {
   background-color: var(--background-color-elements);
   transition: all 0.3s;

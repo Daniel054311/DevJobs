@@ -1,39 +1,44 @@
 <section class="cardWrapper">
+
   @if (  isLoading()) {
-    <div class="loading">
-      Loading...
-    </div>
+  <div class="loading">
+      Loading... please wait 😎
+  </div>
   }
   <div class="parentContainer">
+
     @for (job of getFilteredJobs(); track job) {
     <div
-      class="cardContainer"
-      [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
+    class="cardContainer"
+     [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
      (click)="onSelectJob(job.id)"
     >
-      <div class="image" [style.background-color]="job.logoBackground">
-        <img [src]="job.logo" alt="" />
-      </div>
-      <div class="jobContainer">
-        <div class="job">
-          <div class="jobPostedDate">
-            <p>{{ job.postedAt }}</p>
-            <p>.</p>
-            <p>{{ job.contract }}</p>
-          </div>
-          <div class="jobPosition">{{ job.position }}</div>
-          <p>{{ job.company }}</p>
-        </div>
-        <h4 class="jobLocation">{{ job.location }}</h4>
-      </div>
+
+    <div class="image" [style.background-color]="job.logoBackground">
+    <img [src]="job.logo" [alt]="job.company" />
     </div>
+
+    <div class="jobContainer">
+    <div class="job">
+    <div class="jobPostedDate">
+    <p>{{ job.postedAt }}</p>
+    <p>.</p>
+    <p>{{ job.contract }}</p>
+    </div>
+    <div class="jobPosition">{{ job.position }}</div>
+    <p>{{ job.company }}</p>
+    </div>
+    <h4 class="jobLocation">{{ job.location }}</h4>
+   </div>
+
+   </div>
     }
   </div>
 
 
-@if (getFilteredJobs().length !==0 ) {
+@if (getFilteredJobs().length !==0 && getFilteredJobs().length > 3 ) {
   <button class="loadMore">Load More</button>
-}@else if(errorMessage) {
+}@else if(errorMessage && getFilteredJobs().length <= 0 ) {
   <div class="errorMessage">No job found 😳</div>
 }
 

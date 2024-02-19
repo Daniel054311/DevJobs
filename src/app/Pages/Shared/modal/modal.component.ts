@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './modal.component.css',
 })
 export class ModalComponent {
-  @Output() positionEmitter: EventEmitter<string> = new EventEmitter<string>();
+
+  // @Output() positionEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   locationImg: string = '../../../../assets/desktop/icon-location.svg';
   isVisible: boolean = false;

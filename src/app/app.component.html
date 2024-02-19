@@ -1,5 +1,11 @@
 <main [ngClass]="{ 'darkMode': isDarkMode, 'lightMode': !isDarkMode }">
+
   <app-header (darkModeChange)="onDarkModeChange($event)"></app-header>
+
+  @if (showError) {
+  <app-page-not-found ></app-page-not-found>
+  }
+
 <router-outlet></router-outlet>
 </main>
 

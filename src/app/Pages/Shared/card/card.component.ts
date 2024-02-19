@@ -19,21 +19,21 @@ export class CardComponent {
   errorMessage: boolean = false;
 
   constructor(
-    private router: Router,
-    private jobsService: JobsService,
-    private themeService: ThemeService,
+  private router: Router,
+  private jobsService: JobsService,
+  private themeService: ThemeService,
   ) {}
 
   ngOnInit(): void {
-    this.loadJobs();
+  this.loadJobs();
   }
 
 
   loadJobs() {
     this.loading = true;
     this.jobsService.getAllJobs().subscribe((jobs) => {
-      this.jobs = jobs;
-      this.errorMessage = true;
+    this.jobs = jobs;
+    this.errorMessage = true;
     },
       (err) => {
         this.errorMessage = err;

@@ -1,20 +1,21 @@
 <section>
   <header class="headerContainer" [ngClass]="{ darkMode: isDarkMode }">
-    <div (click)="routeToHome()" class="title">
-      <img src="../../../../assets/desktop/logo.svg" alt="" />
-    </div>
+
+  <div (click)="routeToHome()" class="title">
+  <img src="../../../../assets/desktop/logo.svg" alt="" />
+  </div>
 
     <div class="toggle">
-      <img src="../../../../assets/desktop/icon-sun.svg" alt="" />
-      <label class="switch">
-        <input
-          type="checkbox"
-          (change)="toggleDarkMode()"
-          [checked]="isDarkMode"
-        />
-        <span class="slider round"></span>
-      </label>
-      <img src="../../../../assets/desktop/icon-moon.svg" alt="" />
+    <img src="../../../../assets/desktop/icon-sun.svg" alt="" />
+    <label class="switch">
+    <input
+    type="checkbox"
+    (change)="toggleDarkMode()"
+    [checked]="isDarkMode"     />
+    <span class="slider round"></span>
+    </label>
+    <img src="../../../../assets/desktop/icon-moon.svg" alt="" />
     </div>
+
   </header>
 </section>

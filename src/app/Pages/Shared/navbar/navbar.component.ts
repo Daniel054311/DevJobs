@@ -26,9 +26,9 @@ export class NavbarComponent {
 
 
   constructor(
-    private jobsService: JobsService,
-    private themeService: ThemeService,
-   private modalService: ModalService
+  private jobsService: JobsService,
+  private themeService: ThemeService,
+  private modalService: ModalService
   ) {
 
   }
@@ -37,6 +37,7 @@ export class NavbarComponent {
 
 
   }
+
   openModal() {
     this.modalService.toggleModal(true, this.position);
   }
@@ -46,8 +47,8 @@ export class NavbarComponent {
     this.jobsService.applyFilter(position, location, fullTimeOnly);
   }
 
-  get isDarkMode(): boolean {
-    return this.themeService.getCurrentTheme();
-  }
+      get isDarkMode(): boolean {
+        return this.themeService.getCurrentTheme();
+      }
 
 }

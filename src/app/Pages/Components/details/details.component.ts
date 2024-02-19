@@ -14,14 +14,17 @@ import { FooterComponent } from "../../Shared/footer/footer.component";
 export class DetailsComponent implements OnInit{
 
   job: Job | undefined;
+  loading: boolean = false;
 
   constructor(private route: ActivatedRoute, private jobsService: JobsService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const jobId = +params['id'];
-      this.jobsService.getJobDetails(jobId).subscribe(job => {
-        this.job = job;
+    this.loading = true;
+    const jobId = +params['id'];
+    this.jobsService.getJobDetails(jobId).subscribe(job => {
+    this.job = job;
+    this.loading = false;
       });
     });
   }

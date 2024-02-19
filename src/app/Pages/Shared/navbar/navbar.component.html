@@ -2,71 +2,72 @@
   class="parentContainer"
   [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
 >
-  <div class="navItems filterItems">
+    <div class="navItems filterItems">
     <div class="formControl">
-      <button class="searchIconHiddeen">
-      <img [src]="search" alt="searchIcon" />
-      </button>
-      <input
-        [(ngModel)]="position"
-        [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
-        type="text"
-        placeholder="Filter by title, companies, expertise…"
-      />
-    </div>
-  </div>
-  
-  <!-- [(ngModel)]="titleFilter" (input)="FilterAllJobs()" -->
-  <div class="navItems location">
-    <div class="formControl">
-      <button>
-        <img style="background-color: transparent" [src]="locationImg" alt="" />
-      </button>
-      <input
-        [(ngModel)]="location"
-        [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
-        type="text"
-        placeholder="Filter by location..."
-      />
-    </div>
-  </div>
-
-  <div
-    class="navItems checkboxContainer"
+    <button class="searchIconHiddeen">
+    <img [src]="search" alt="searchIcon" />
+    </button>
+    <input
+    [(ngModel)]="position"
     [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
-  >
-    <div class="checkboxItem">
-      <label class="labelContainer"
+    type="text"
+    placeholder="Filter by title, companies, expertise…"
+     />
+    </div>
+    </div>
+
+  <!-- [(ngModel)]="titleFilter" (input)="FilterAllJobs()" -->
+     <div class="navItems location">
+      <div class="formControl">
+      <button>
+      <img style="background-color: transparent" [src]="locationImg" alt="" />
+      </button>
+      <input
+      [(ngModel)]="location"
+      [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
+      type="text"
+      placeholder="Filter by location..."
+      />
+      </div>
+      </div>
+
+      <div
+       class="navItems checkboxContainer"
+       [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
+        >
+        <div class="checkboxItem">
+        <label class="labelContainer"
         ><span>Full Time <span class="Only">Only</span></span>
         <input type="checkbox" [(ngModel)]="fullTimeOnly" />
         <span class="checkmark"></span>
-      </label>
-    </div>
-    <button
-      class="search"
-      type="submit"
-      (click)="applyFilter(position, location, fullTimeOnly)"
-    >
-      Search
-    </button>
-  </div>
+        </label>
+         </div>
+         <button
+          class="search"
+          type="submit"
+          (click)="applyFilter(position, location, fullTimeOnly)"
+          >
+            Search
+          </button>
+          </div>
 
 
   <!-- mobile views -->
 
-  <div class="navItems filterIconsWrapper">
-    <input
-    [(ngModel)]="position"
-      [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
-      type="text"
-      placeholder="Filter by title, companies, expertise…"
-    />
-  </div>
+          <div class="navItems filterIconsWrapper">
+          <input
+          [(ngModel)]="position"
+          [ngClass]="{ darkMode: isDarkMode, lightMode: !isDarkMode }"
+          type="text"
+          placeholder="Filter by title, companies, expertise…"
+          />
+          </div>
 
-  <div class="navItems icons">
-    <button class="filterIcon">
-      <img  (click)=" openModal()" [src]="filterIcon" alt="filterIcon" />
-    </button>
-    <button (click)="applyFilter(position, location, fullTimeOnly)" class="searchIcon"><img [src]="search" alt="searchIcon" /></button>
-  </div>
+        <div class="navItems icons">
+        <button class="filterIcon">
+        <img  (click)=" openModal()" [src]="filterIcon" alt="filterIcon" />
+        </button>
+        <button (click)="applyFilter(position, location, fullTimeOnly)" class="searchIcon"><img [src]="search" alt="searchIcon" /></button>
+        </div>
+
 </div>
