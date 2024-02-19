@@ -40,7 +40,7 @@ apply for the job
 
 ### Links
 
-- Live Stie URL: [https://]
+- Live Stie URL: [https://devjobsproject.netlify.app/]
 
 ## Tech Stack
 

@@ -8,7 +8,7 @@
   border-radius: 6px;
 }
 .loading{
-  margin: auto;
+  margin: 5% 50%;
   color: var(--color-violet);
 }
 .topBar {

@@ -1,5 +1,9 @@
   <section>
 
+  @if (loading) {
+ <div class="loading"> loading...</div>
+ }
+
   <div class="parentContainer">
 
    @if (job) {
@@ -59,11 +63,6 @@
     </div>
     </div>
     }
-
-    @if (loading) {
-      <div class="loading"> loading...</div>
-      }
-      
     </div>
 
     </section>
