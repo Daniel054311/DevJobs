@@ -1,19 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ModalService } from '../../../modal.service';
-import { JobsService } from '../../../jobs.service';
+import { ModalService } from '../../../service/modal/modal.service';
+import { JobsService } from '../../../service/job/jobs.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css',
 })
 export class ModalComponent {
-
   // @Output() positionEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   locationImg: string = '../../../../assets/desktop/icon-location.svg';
@@ -24,16 +23,16 @@ export class ModalComponent {
 
   private subscription: Subscription;
 
-  constructor(private modalService: ModalService, private jobsService: JobsService,) {
+  constructor(
+    private modalService: ModalService,
+    private jobsService: JobsService
+  ) {
     this.subscription = this.modalService.isVisible$.subscribe((isVisible) => {
       this.isVisible = isVisible;
     });
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() {}
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
@@ -48,7 +47,6 @@ export class ModalComponent {
     this.jobsService.applyFilter(position, location, fullTimeOnly);
     // this.jobsService.applyFilter(position, location, fullTimeOnly);
     // console.log(position)
-    this.closeModal()
+    this.closeModal();
   }
-
 }

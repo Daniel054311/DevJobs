@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { JobsService } from '../../../jobs.service';
-import { Job } from '../../../job';
-import { ThemeService } from '../../../theme.service';
+import { JobsService } from '../../../service/job/jobs.service';
+import { Job } from '../../../service/job/job';
+import { ThemeService } from '../../../service/theme/theme.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
-
 @Component({
-    selector: 'app-card',
-    standalone: true,
-    templateUrl: './card.component.html',
-    styleUrl: './card.component.css',
-    imports: [CommonModule]
+  selector: 'app-card',
+  standalone: true,
+  templateUrl: './card.component.html',
+  styleUrl: './card.component.css',
+  imports: [CommonModule],
 })
 export class CardComponent {
   jobs: Job[] = [];
@@ -19,22 +18,22 @@ export class CardComponent {
   errorMessage: boolean = false;
 
   constructor(
-  private router: Router,
-  private jobsService: JobsService,
-  private themeService: ThemeService,
+    private router: Router,
+    private jobsService: JobsService,
+    private themeService: ThemeService
   ) {}
 
   ngOnInit(): void {
-  this.loadJobs();
+    this.loadJobs();
   }
-
 
   loadJobs() {
     this.loading = true;
-    this.jobsService.getAllJobs().subscribe((jobs) => {
-    this.jobs = jobs;
-    this.errorMessage = true;
-    },
+    this.jobsService.getAllJobs().subscribe(
+      (jobs) => {
+        this.jobs = jobs;
+        this.errorMessage = true;
+      },
       (err) => {
         this.errorMessage = err;
       }
@@ -61,15 +60,19 @@ export class CardComponent {
     let filteredJobs = this.jobs;
 
     if (position) {
-      filteredJobs = filteredJobs.filter(job => job.position.toLowerCase().includes(position.toLowerCase()));
+      filteredJobs = filteredJobs.filter((job) =>
+        job.position.toLowerCase().includes(position.toLowerCase())
+      );
     }
 
     if (location) {
-      filteredJobs = filteredJobs.filter(job => job.location.toLowerCase().includes(location.toLowerCase()));
+      filteredJobs = filteredJobs.filter((job) =>
+        job.location.toLowerCase().includes(location.toLowerCase())
+      );
     }
 
     if (fullTimeOnly) {
-      filteredJobs = filteredJobs.filter(job => job.contract === 'Full Time');
+      filteredJobs = filteredJobs.filter((job) => job.contract === 'Full Time');
     }
     this.loading = true;
 

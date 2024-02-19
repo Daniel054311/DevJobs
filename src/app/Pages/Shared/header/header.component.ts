@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ThemeService } from '../../../theme.service';
+import { ThemeService } from '../../../service/theme/theme.service';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Router } from '@angular/router';
 
@@ -14,12 +14,12 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Output() darkModeChange = new EventEmitter<boolean>();
 
-  constructor(private router:Router,private themeService: ThemeService) {}
+  constructor(private router: Router, private themeService: ThemeService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   routeToHome() {
-    this.router.navigate(["/"]);
+    this.router.navigate(['/']);
   }
 
   toggleDarkMode(): void {
