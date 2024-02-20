@@ -1,13 +1,11 @@
-
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
-
 
 body {
   background-color: var(--background-color-app);
@@ -24,9 +22,9 @@ input[type="text"] {
   border: none;
   caret-color: #5964e0;
   background-color: var(--background-color-elements);
-  color: var(  --color-text);
+  color: var(--color-text);
 }
 
-button{
+button {
   border: none;
 }

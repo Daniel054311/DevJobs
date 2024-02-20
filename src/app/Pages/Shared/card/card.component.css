@@ -1,130 +1,139 @@
-.cardWrapper{
+.cardWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5% 10%;
 }
-.loading{
+
+.loading {
   color: var(--color-violet);
   font-size: var(--h4);
   line-height: var(--h4);
   font-weight: bold;
   margin: auto;
 }
-.parentContainer{
- display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 40px;
-padding: 40px 0;
+
+.parentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0;
 }
 
-.cardContainer{
+.cardContainer {
   cursor: pointer;
   padding: 5% 5%;
   border-radius: 6px;
   color: var(--color-dark-grey);
   transition: all 0.3s;
-  background-color: var( --background-color-elements);
-
+  background-color: var(--background-color-elements);
 }
 
-.cardContainer:hover{
+.cardContainer:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.jobContainer{
+
+.jobContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 50px;
 }
-.job{
-display: flex;
-flex-direction: column;
- gap: 10px;
+
+.job {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.jobPosition{
+.jobPosition {
   color: var(--text-color);
   font-size: var(--h3);
   line-height: var(--h3);
   font-weight: bold;
 }
 
-.jobLocation{
-color: var(--color-violet);
-font-size: var(--h4);
-line-height: var(--h4);
-font-weight: bold;
+.jobLocation {
+  color: var(--color-violet);
+  font-size: var(--h4);
+  line-height: var(--h4);
+  font-weight: bold;
 }
 
-.jobPosition:hover{
+.jobPosition:hover {
   transition: all 0.3s;
   cursor: pointer;
   color: var(--background-color-btn-2-hover);
 }
 
-.jobPostedDate{
+.jobPostedDate {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.image{
+.image {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -45px;
   margin-bottom: 10px;
   position: relative;
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
   border-radius: 18px;
 }
-.errorMessage{
+.errorMessage {
   margin: auto;
   color: red;
   font-weight: bold;
   font-size: var(--h3);
 }
-.loadMore{
-margin-top: 40px;
-width: 100px;
-height: 48px;
-margin: auto;
-border-radius: 5px;
-background-color: var( --color-violet);
-color: var(--color-white);
-font-weight: bold;
+.loadMore {
+  margin-top: 40px;
+  width: 141px;
+  height: 48px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  font-weight: bold;
 }
-.loadMore:hover{
+.loadMore:hover {
   cursor: pointer;
   background-color: var(--color-light-violet);
 }
 
-@media screen  and (max-width: 1072px) {
-  .parentContainer{
+@media screen and (max-width: 1072px) {
+  .parentContainer {
     grid-template-columns: 1fr 1fr;
-   }
-   .image{
+  }
+  .image {
     margin-top: -45px;
   }
 }
 
-@media screen and (max-width: 940px){
-  .parentContainer{
+@media screen and (max-width: 940px) {
+  .parentContainer {
     margin: 40px 0;
-   grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
-  .image{
+  .image {
     margin-top: -55px;
   }
+  /* .loadMore{
+    padding:10px 18px ;
+  } */
 }
 
-@media screen and (max-width: 600px){
-  .parentContainer{
+@media screen and (max-width: 600px) {
+  .parentContainer {
     margin: 40px 0;
-   grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
-  .image{
+  .image {
     margin-top: -45px;
   }
+  /* .loadMore{
+    padding:10px 18px ;
+  } */
 }

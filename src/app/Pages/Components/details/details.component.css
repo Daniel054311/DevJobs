@@ -7,7 +7,7 @@
   gap: 30px;
   border-radius: 6px;
 }
-.loading{
+.loading {
   margin: 5% 50%;
   color: var(--color-violet);
 }
@@ -33,7 +33,7 @@
   color: var(--color-btn-2);
   font-weight: bold;
   cursor: pointer;
-  width: 100px;
+  width: 147px;
   height: 48px;
   margin-right: 4%;
   border-radius: 5px;
@@ -82,7 +82,7 @@
 .applyContainer button {
   font-weight: bold;
   cursor: pointer;
-  width: 100px;
+  width: 141px;
   height: 48px;
   border-radius: 5px;
   color: var(--color-white);
@@ -155,11 +155,12 @@ h4 {
     padding-bottom: 20%;
   }
   .siteButton {
+    width: 147px;
+    height: 48px;
     padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
   }
   .companyNameContainer {
     display: flex;

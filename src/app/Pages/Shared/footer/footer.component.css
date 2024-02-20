@@ -1,55 +1,54 @@
-footer{
+footer {
   margin-top: 8%;
-  background-color: var( --background-color-elements);
+  background-color: var(--background-color-elements);
   transition: all 0.3s;
   padding: 20px 0;
 }
 
-.parentContainer{
+.parentContainer {
   color: var(--color-dark-grey);
   padding: 0 20%;
   display: flex;
   justify-content: space-between;
 }
-.positionContainer{
+.positionContainer {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.applyButton{
+.applyButton {
   font-weight: bold;
   cursor: pointer;
-  width: 100px;
+  width: 141px;
   height: 48px;
   border-radius: 5px;
   color: var(--color-white);
-  background-color: var( --color-violet);
+  background-color: var(--color-violet);
 }
 
-.applyButton:hover{
- transition: all 0.3s;
- cursor: pointer;
-background-color: var(--color-light-violet);
+.applyButton:hover {
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: var(--color-light-violet);
 }
-h3{
+h3 {
   color: var(--text-color);
   font-size: var(--h3);
   line-height: var(--h3);
   font-weight: bold;
 }
 
-@media screen and (max-width:940px) {
-  .parentContainer{
+@media screen and (max-width: 940px) {
+  .parentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
   }
-.positionContainer{
-  display: none;
-}
-.applyButton{
-  width: 100%;
-}
-
+  .positionContainer {
+    display: none;
+  }
+  .applyButton {
+    width: 100%;
+  }
 }
