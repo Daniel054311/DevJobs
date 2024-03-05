@@ -89,7 +89,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1072px) {
+  .headerContainer {
+    width: 100%;
+    padding: 45px 10%;
+    background-image: url("../../../../assets/tablet/bg-pattern-header-3.svg");
+  }
+}
+
+@media screen and (max-width: 600px) {
   .headerContainer {
     width: 100%;
     padding: 45px 10%;
