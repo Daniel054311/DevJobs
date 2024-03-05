@@ -12,7 +12,7 @@
   border-radius: 5px;
 }
 
-/* Styles for navigatfion items */
+/* Styles for navigation items */
 .navItems {
   display: flex;
   flex-direction: row;
@@ -41,7 +41,7 @@
   display: none;
 }
 
-.filterIcon{
+.filterIcon {
   cursor: pointer;
 }
 
@@ -57,13 +57,13 @@
   font-weight: bold;
 }
 
-/* styles for the icons */
+/* Styles for the icons */
 button {
   background-color: transparent;
 }
 
 .search {
-  padding:10px 20px ;
+  padding: 10px 20px;
   background-color: var(--color-violet);
   color: var(--color-white);
   font-size: 16px;
@@ -78,8 +78,6 @@ button {
 }
 
 span {
-  /* font-size: var(--h4);
-  line-height: var(--h4); */
   font-weight: bold;
 }
 
@@ -92,7 +90,7 @@ span {
   gap: 10px;
 }
 
-/* checkbox css */
+/* Checkbox CSS */
 .labelContainer {
   display: block;
   position: relative;
@@ -104,6 +102,7 @@ span {
   -ms-user-select: none;
   user-select: none;
 }
+
 .labelContainer input {
   position: absolute;
   opacity: 0;
@@ -126,6 +125,7 @@ span {
   transition: all 0.3s;
   background-color: var(--background-btn-2);
 }
+
 /* When the checkbox is checked, add a blue background */
 .labelContainer input:checked ~ .checkmark {
   background-color: var(--color-violet);
@@ -157,23 +157,21 @@ span {
 
 @media screen and (max-width: 1072px) {
   .parentContainer {
-  margin: -50px 5%;
-  width: 90%;
+    margin: -50px 5%;
+    width: 90%;
   }
+
   .Only {
     display: none;
   }
-  /* span{
-    font-size: 16px;
-  } */
-  .search {
-  height:48px;
-  width:80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
 
+  .search {
+    height: 48px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -189,9 +187,7 @@ span {
   .navItems:nth-child(3) {
     display: none;
   }
-  /* span{
-  font-size: var(--h4);
-} */
+
   .darkMode .filterIcon img {
     filter: brightness(0) invert(1);
   }
@@ -201,10 +197,12 @@ span {
     justify-content: space-between;
     gap: 5%;
   }
+
   .filterIconsWrapper {
     display: block;
     width: 100%;
   }
+
   .icons {
     display: block;
     display: flex;
@@ -215,15 +213,14 @@ span {
     border-radius: 5px;
     padding: 10px;
     background-color: var(--color-violet);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
+
   .searchIcon:hover {
     transition: all 0.4s;
     cursor: pointer;
     background-color: var(--color-light-violet);
   }
+
   .searchIcon img {
     filter: brightness(0) invert(1);
     inline-size: 20px;

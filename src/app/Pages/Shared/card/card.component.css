@@ -121,16 +121,6 @@
   }
 }
 
-/* @media screen and (max-width: 940px) {
-  .parentContainer {
-    margin: 40px 0;
-    grid-template-columns: 1fr;
-  }
-  .image {
-    margin-block-start: -55px;
-  }
-} */
-
 @media screen and (max-width: 600px) {
   .cardWrapper {
     padding: 50px 5%;
