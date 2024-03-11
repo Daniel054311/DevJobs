@@ -5,11 +5,12 @@
   align-items: center;
   transition: all 0.3s;
   background-color: var(--background-color-elements);
-  height: 10vh;
-  padding: 0 2%;
-  margin: -30px 10%;
+  height: 80px;
+  padding: 0 20px;
+  margin: -40px 10%;
   width: 80%;
   border-radius: 5px;
+  position: absolute;
 }
 
 /* Styles for navigation items */
@@ -63,10 +64,10 @@ button {
 }
 
 .search {
-  padding: 10px 20px;
+  padding: 15px 30.5px;
+  /* padding: 26px 38.5px; */
   background-color: var(--color-violet);
   color: var(--color-white);
-  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
 }
@@ -157,7 +158,7 @@ span {
 
 @media screen and (max-width: 1072px) {
   .parentContainer {
-    margin: -50px 5%;
+    margin: -40px 5%;
     width: 90%;
   }
 
@@ -178,10 +179,9 @@ span {
   .parentContainer {
     justify-content: space-between;
     align-items: center;
-    margin: -35px 5%;
+    margin: -40px 5%;
     position: absolute;
   }
-
   .navItems:nth-child(1),
   .navItems:nth-child(2),
   .navItems:nth-child(3) {

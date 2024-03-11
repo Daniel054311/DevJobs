@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { NavigationError, Router, RouterOutlet } from '@angular/router';
-import { JobsService } from './service/job/jobs.service';
-import { Job } from './service/job/job';
-import { JobsComponent } from './Pages/Components/jobs/jobs.component';
-import { HeaderComponent } from './Pages/Shared/header/header.component';
-import { ThemeService } from './service/theme/theme.service';
 import { PageNotFoundComponent } from './Pages/Components/page-not-found/page-not-found.component';
+import { HeaderComponent } from './Pages/Shared/header/header.component';
+import { Job } from './service/job/job';
+import { ThemeService } from './service/theme/theme.service';
 
 @Component({
   selector: 'app-root',

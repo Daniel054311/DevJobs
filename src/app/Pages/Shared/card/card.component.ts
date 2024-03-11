@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { JobsService } from '../../../service/job/jobs.service';
-import { Job } from '../../../service/job/job';
-import { ThemeService } from '../../../service/theme/theme.service';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Job } from '../../../service/job/job';
+import { JobsService } from '../../../service/job/jobs.service';
+import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component({
   selector: 'app-card',

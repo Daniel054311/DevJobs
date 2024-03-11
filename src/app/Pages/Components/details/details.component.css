@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: 140px;
   border-radius: 6px;
 }
 
@@ -42,13 +42,13 @@
   transition: all 0.3s;
   background-color: var(--background-btn-2-hover);
 }
-.companyNameBg {
+.companyLogo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15vh;
+  height: 140px;
   width: 140px;
-  border-bottom-left-radius: 6px;
+  border-end-start-radius: 6px;
   color: var(--color-white);
   font-weight: bold;
 }
@@ -140,10 +140,19 @@ h4 {
   font-weight: bold;
 }
 
-/* topBar Media query */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1072px) {
   .parentContainer {
-    margin: -3% 10%;
+    margin: -3% 5%;
+  }
+.topBar{
+ height: 140px;
+}
+}
+
+/* topBar Media query */
+@media screen and (max-width: 600px) {
+  .parentContainer {
+    margin: -3% 5%;
   }
 
   .topBar {
@@ -151,8 +160,8 @@ h4 {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    height: 40vh;
-    padding-bottom: 20%;
+    block-size: 205px;
+    padding-block-end:240px;
   }
   .siteButton {
     width: 147px;
@@ -161,6 +170,10 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .loading {
+    margin: auto;
+    color: var(--color-violet);
   }
   .companyNameContainer {
     display: flex;
@@ -175,9 +188,9 @@ h4 {
     justify-content: center;
     align-items: center;
   }
-  .companyNameBg {
-    width: 50px; /* Adjust width using viewport height */
-    height: 50px;
+  .companyLogo {
+    inline-size: 50px; /* Adjust width using viewport height */
+    block-size: 50px;
     border-radius: 18px;
     margin: -10% 0px;
   }
